@@ -10,7 +10,8 @@
     </style>
 </head>
 <body>
-    <form action="/save" method="post">
+    <a href="/home">Home</a> <br>
+    <form action="categoria_alimento/save" method="post">
         <fieldset>
             <legend>Cadastro de Categoria de Alimentos</legend>
             <label for="descricao">Descricao:</label>
