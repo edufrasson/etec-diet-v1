@@ -21,9 +21,10 @@
         <fieldset >
             <legend>Cadastro de Nutrientes</legend>
             <div class="form-group">
-                <label for="descricao">Descrição (Nome) do produto:</label>
+                <label for="descricao">Descrição:</label>
                 <input class="form-control" id="descricao" name="descricao" type="text" />
-                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                <br>
+                <button type="submit" class="btn btn-primary mb-3">Cadastrar Nutriente</button>
             </div>
         </fieldset>            
     </form>
