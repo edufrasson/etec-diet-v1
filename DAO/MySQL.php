@@ -1,7 +1,7 @@
 <?php
 
 class MySQL extends PDO{
-    public $dsn = "mysql:host=localhost;dbname=db_etec_diet";
+    public $dsn = "mysql:host=localhost;dbname=etec_diet";
     public $user = "root";
     public $pass = "Eduardo@mysql";
     
