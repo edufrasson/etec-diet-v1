@@ -26,6 +26,8 @@
       crossorigin="anonymous">
     <style>
         label, input { display: block;}
+        body{background-color: #ECB390;}
+        form{background-color: white;}
     </style>
     
 </head>
