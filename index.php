@@ -43,7 +43,11 @@ switch($uri_parse){
     
     case '/alimento':
         AlimentoController::form();
-    break;  
+    break; 
+
+    case '/alimento/save':
+        AlimentoController::save();
+    break;   
      
     default:
         include 'View/home.php';

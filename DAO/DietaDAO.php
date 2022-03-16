@@ -24,7 +24,5 @@ class DietaDAO{
         
 
         $stmt->execute();
-
-        echo 'Adicionado.';
     }
 }

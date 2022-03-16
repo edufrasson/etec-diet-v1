@@ -15,5 +15,7 @@ class DietaController{
         $model->id_paciente = $_POST['id_paciente'];        
 
         $model->save();
+
+        header("Location: /dieta");
     }
 }

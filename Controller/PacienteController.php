@@ -16,5 +16,7 @@ class PacienteController{
         $model->data_nascimento = $_POST['data_nascimento'];
 
         $model->save();
+
+        header("Location: /paciente");
     }
 }

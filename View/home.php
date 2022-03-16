@@ -14,14 +14,7 @@
     </header>
 
     <main>
-        <ul class="nav justify-content-center">          
-            <li class="nav-item">
-                <a class="nav-link" href="/categoria_alimento">Cadastro Alimento</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/categoria_nutriente">Cadastro Nutriente</a>
-            </li>          
-        </ul>
+            
     </main>
 
     <footer>

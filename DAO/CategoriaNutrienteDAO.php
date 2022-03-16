@@ -20,7 +20,5 @@ class CategoriaNutrienteDAO{
         $stmt->bindValue(1, $model->descricao);
 
         $stmt->execute();
-
-        echo 'Adicionado.';
     }
 }

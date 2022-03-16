@@ -20,7 +20,17 @@ class CategoriaAlimentoDAO{
         $stmt->bindValue(1, $model->descricao);
 
         $stmt->execute();
+    }
 
-        echo 'Adicionado.';
+    public function getAllRows(){
+        $sql = "SELECT * FROM categoria_alimento";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+
+        while($categoria = $stmt->fetchObject())
+            $array_categorias[] = $categoria;
+
+        return $array_categorias;    
     }
 }

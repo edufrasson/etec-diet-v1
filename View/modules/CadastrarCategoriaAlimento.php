@@ -15,7 +15,10 @@
     
 </head>
 <body>
-    <a href="/home">Home</a> <br>
+    <header>
+        <?php include 'includes/cabecalho.php'?>
+    </header>
+    <br>
     <div class="container">
     <form class="border p-5" action="categoria_alimento/save" method="post">
         <fieldset >
