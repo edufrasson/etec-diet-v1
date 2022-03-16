@@ -21,4 +21,16 @@ class CategoriaNutrienteDAO{
 
         $stmt->execute();
     }
+
+    public function getAllRows(){
+        $sql = "SELECT * FROM categoria_nutriente;";
+
+        $stmt = $this->conexao->prepare($sql);
+
+        $stmt->execute();
+
+        while($categoria_nutriente = $stmt->fetchObject())
+            $array_categoria[] = $categoria_nutriente;
+        return $array_categoria;    
+    }
 }

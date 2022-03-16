@@ -32,4 +32,7 @@
   <li class="nav-item">
     <a class="nav-link" href="/alimento"> Alimento</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/nutriente"> Nutriente</a>
+  </li>
 </ul>

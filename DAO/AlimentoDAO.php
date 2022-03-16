@@ -20,5 +20,16 @@ class AlimentoDAO{
         $stmt->execute();
 
         echo 'adicionado.';
-    }   
+    }
+    
+    public function getAllRows(){
+        $sql = 'SELECT * FROM alimento';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+
+        while($alimento = $stmt->fetchObject())
+            $array_alimentos[] = $alimento;
+        return $array_alimentos;    
+    }
 }
