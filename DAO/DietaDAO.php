@@ -6,7 +6,7 @@ class DietaDAO{
 
     public function __construct()
     {
-        include 'MySQL.php';
+        include_once 'MySQL.php';
 
         $this->conexao = new MySQL();
     }
