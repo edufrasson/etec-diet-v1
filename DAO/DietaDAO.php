@@ -25,4 +25,15 @@ class DietaDAO{
 
         $stmt->execute();
     }
+
+    public function getAllRows(){
+        $sql = 'SELECT * FROM dieta';
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+
+        while($dieta = $stmt->fetchObject())
+            $arrays_dieta[] = $dieta;
+        return $arrays_dieta;   
+    }
 }

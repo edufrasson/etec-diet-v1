@@ -1,21 +1,20 @@
 <?php 
 
-    include 'DAO/PacienteDAO.php';
+    include 'DAO/DietaDAO.php';
 
-    $pacientes = new PacienteDAO();
+    $dieta = new DietaDAO();
 
-    $lista_pacientes = $pacientes->getAllRows();
-    $total_pacientes = count($lista_pacientes);
+    $lista_dieta = $dieta->getAllRows();
+    $total_dieta = count($lista_dieta);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Dietas</title>
+    <title>Cadastro de Refeições</title>
     <link rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
@@ -33,32 +32,28 @@
     </header>
     <br>
     <div class="container">
-    <form class="border p-5" action="dieta/save" method="post">
+    <form class="border p-5" action="refeicao/save" method="post">
         <fieldset >
-            <legend>Cadastro de Dietas</legend>
+            <legend>Cadastro Refeições</legend>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <input class="form-control" id="descricao" name="descricao" type="text" />                
+                <input class="form-control" id="descricao" name="descricao" type="text" />
                 <br>
                 
-                <label for="data_inicio">Data de inicio:</label>
-                <input class="form-control" id="data_inicio" name="data_inicio" type="date" />                
+                <label for="horario">Horario:</label>
+                <input class="form-control" id="horario" name="horario" type="number" step="10" />
                 <br>
-
-                <label for="data_fim">Data de fim:</label>
-                <input class="form-control" id="data_fim" name="data_fim" type="date" />                
-                <br>
-                <label for="id_paciente">Paciente: </label>
-                <select name="id_paciente" id="id_paciente" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    
-                    <?php for($i=0; $i<$total_pacientes; $i++):?>
-                        <option value="<?= $lista_pacientes[$i]->id?>"><?=$lista_pacientes[$i]->nome?></option>
-                    <?php endfor?>
-                    
+                
+                <label for="id_dieta">Dieta: </label>
+                <select name="id_dieta" id="id_dieta">
+                    <?php for($i=0; $i < $total_dieta; $i++): ?>
+                        <option value="<?=$lista_dieta[$i]->id?>">
+                            <?=$lista_dieta[$i]->descricao?>
+                        </option>
+                    <?php endfor ?>
                 </select>
-                <br>  <br>       
-
-                <button type="submit" class="btn btn-primary mb-3">Cadastrar Dieta</button>
+                <br><br>            
+                <button type="submit" class="btn btn-primary mb-3">Cadastrar Refeicao</button>
             </div>
         </fieldset>            
     </form>

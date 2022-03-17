@@ -6,6 +6,7 @@ include 'Controller/CategoriaNutrienteController.php';
 include 'Controller/PacienteController.php';
 include 'Controller/DietaController.php';
 include 'Controller/NutrienteController.php';
+include 'Controller/RefeicaoController.php';
 
 
 $uri_parse = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
@@ -57,7 +58,15 @@ switch($uri_parse){
 
     case '/nutriente/save':
         NutrienteController::save();
-    break;   
+    break;
+    
+    case '/refeicao':
+        RefeicaoController::form();
+    break; 
+
+    case '/refeicao/save':
+        RefeicaoController::save();
+    break; 
      
     default:
         include 'View/home.php';

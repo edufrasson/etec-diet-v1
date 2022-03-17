@@ -16,23 +16,38 @@
     </div>
   </div>
 </nav>
-<ul class="nav justify-content-center" style="background-color: #F5EEDC">
+<ul class="nav justify-content-center align-items-center p-2" style="background-color: #F5EEDC">
   <li class="nav-item">
-    <a class="nav-link" href="/categoria_alimento">Categoria Alimento</a>
+    <strong><a style="color: #DD4A48; padding-right: 15px;" href="/categoria_alimento">Categoria Alimento</a></strong>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/categoria_nutriente">Categoria Nutriente</a>
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/categoria_nutriente">Categoria Nutriente</a>
+    </strong>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/paciente"> Paciente</a>
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/paciente"> Paciente</a>
+    </strong>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/dieta"> Dieta</a>
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/dieta"> Dieta</a>
+    </strong>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/alimento"> Alimento</a>
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/alimento"> Alimento</a>
+    </strong>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/nutriente"> Nutriente</a>
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/nutriente"> Nutriente</a>
+    </strong>
+  </li>
+  <li class="nav-item">
+    <strong>
+      <a style="color: #DD4A48; padding-right: 20px;" href="/refeicao"> Refeição</a>
+    </strong>
   </li>
 </ul>
