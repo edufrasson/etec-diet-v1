@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastros</title>
     
     <?php include 'modules/includes/css_config.php' ?>
 </head>
 <body>
     <header>
-        <?php include 'modules/includes/cabecalho.php'?>
+        <?php include 'modules/includes/cabecalho_cadastro.php'?>
     </header>
 
     <main>

@@ -29,7 +29,7 @@
 </head>
 <body>
     <header>
-        <?php include 'includes/cabecalho.php'?>
+        <?php include 'includes/cabecalho_cadastro.php'?>
     </header>
     <br>
     <div class="container">

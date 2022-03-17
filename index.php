@@ -67,6 +67,10 @@ switch($uri_parse){
     case '/refeicao/save':
         RefeicaoController::save();
     break; 
+    
+    case '/cadastros':
+        include 'View/cadastros.php';
+    break;   
      
     default:
         include 'View/home.php';
