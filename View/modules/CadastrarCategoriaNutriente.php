@@ -24,7 +24,7 @@
     <div class="container">
     <form class="border p-5" action="categoria_nutriente/save" method="post">
         <fieldset >
-            <legend>Cadastro de Nutrientes</legend>
+            <legend>Cadastro de Categoria de Nutrientes</legend>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
                 <input class="form-control" id="descricao" name="descricao" type="text" />

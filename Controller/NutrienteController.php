@@ -16,5 +16,7 @@ class NutrienteController{
         $model->id_categoria_nutriente = $_POST['id_categoria_nutriente'];
 
         $model->save();
+
+        header("Location: /nutriente");
     }
 }

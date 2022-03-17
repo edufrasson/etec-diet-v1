@@ -7,5 +7,7 @@ class NutrienteModel{
         include 'DAO/NutrienteDAO.php';
 
         $dao = new NutrienteDAO();
+
+        $dao->insert($this);
     }
 }

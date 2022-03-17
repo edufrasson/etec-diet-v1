@@ -46,7 +46,7 @@
                 <br>
                 
                 <label for="quantidade">Quantidade:</label>
-                <input class="form-control" id="quantidade" name="quantidade" type="number" step="10" />
+                <input class="form-control" id="quantidade" name="quantidade" type="number" step="0.01" />
                 <br>
                 
                 <label for="id_categoria_nutriente">Categoria do Nutriente: </label>
@@ -59,7 +59,7 @@
                 </select>
                 <br><br>
 
-                <label for="id_alimento">Categoria do Nutriente: </label>
+                <label for="id_alimento">Alimento: </label>
                 <select name="id_alimento" id="id_alimento">
                     <?php for($i=0; $i < $total_alimento; $i++): ?>
                         <option value="<?=$lista_alimento[$i]->id?>">

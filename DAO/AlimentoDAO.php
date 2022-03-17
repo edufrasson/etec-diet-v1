@@ -19,7 +19,7 @@ class AlimentoDAO{
 
         $stmt->execute();
 
-        echo 'adicionado.';
+        echo '<script>alert("adicionado")</script>';
     }
     
     public function getAllRows(){

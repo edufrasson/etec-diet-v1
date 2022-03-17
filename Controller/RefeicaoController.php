@@ -13,5 +13,7 @@ class RefeicaoController{
         $model->id_dieta = $_POST['id_dieta'];
 
         $model->save();
+
+        header("Location: /refeicao");
     }
 }
