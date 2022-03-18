@@ -20,12 +20,11 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
       crossorigin="anonymous">
-    <style>
+      <style>
         label, input { display: block;}
-        body{background-color: #ECB390;}
+        body{background-color: #FFF1BD;}
         form{background-color: white;}
-    </style>
-    
+      </style>
 </head>
 <body>
     <header>
