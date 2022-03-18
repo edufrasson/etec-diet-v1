@@ -66,6 +66,14 @@ switch($uri_parse){
 
     case '/refeicao/save':
         RefeicaoController::save();
+    break;
+    
+    case '/refeicao_alimento':
+        RefeicaoAlimentoAssocController::form();
+    break; 
+
+    case '/refeicao_alimento/save':
+        RefeicaoAlimentoAssocController::save();
     break; 
     
     case '/cadastros':
