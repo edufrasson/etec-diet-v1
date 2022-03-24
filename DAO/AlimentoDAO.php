@@ -9,13 +9,14 @@ class AlimentoDAO{
     }
 
     public function insert(AlimentoModel $model){
-        $sql = 'INSERT INTO alimento(nome, porcao, id_categoria_alimento) VALUES (?, ?, ?)';
+        $sql = 'INSERT INTO alimento(nome, porcao, id_categoria_alimento, calorias) VALUES (?, ?, ?, ?)';
 
         $stmt = $this->conexao->prepare($sql);
 
         $stmt->bindValue(1, $model->nome);
         $stmt->bindValue(2, $model->porcao);
         $stmt->bindValue(3, $model->id_categoria_alimento);
+        $stmt->bindValue(4, $model->calorias);
 
         $stmt->execute();
 

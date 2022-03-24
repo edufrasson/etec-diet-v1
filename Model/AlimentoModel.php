@@ -1,7 +1,7 @@
 <?php
 
 class AlimentoModel{    
-    public $nome, $id_categoria_alimento, $porcao;
+    public $nome, $id_categoria_alimento, $porcao, $calorias;
 
     public function save(){
         include 'DAO/AlimentoDAO.php';

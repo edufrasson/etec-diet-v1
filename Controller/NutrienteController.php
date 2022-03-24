@@ -11,7 +11,7 @@ class NutrienteController{
         $model = new NutrienteModel();
 
         $model->descricao = $_POST['descricao'];
-        $model->quantidade = $_POST['quantidade'];
+        $model->quantidade = $_POST['quantidade'] * 1000;
         $model->id_alimento = $_POST['id_alimento'];
         $model->id_categoria_nutriente = $_POST['id_categoria_nutriente'];
 

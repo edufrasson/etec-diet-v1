@@ -41,7 +41,11 @@
                 <br>
                 
                 <label for="porcao">Porção:</label>
-                <input class="form-control" id="porcao" name="porcao" type="number" step="10" />
+                <input class="form-control" id="porcao" name="porcao" type="number" step="1" />
+                <br>
+
+                <label for="calorias">Quantidade de Calorias:</label>
+                <input class="form-control" id="calorias" name="calorias" type="number" step="1" />
                 <br>
                 
                 <label for="id_categoria_alimento">Categoria do alimento: </label>
