@@ -7,5 +7,8 @@ class RefeicaoAlimentoAssocModel{
         include 'DAO/RefeicaoAlimentoAssocDAO.php';
 
         $dao = new RefeicaoAlimentoAssocDAO;
+        $dao->insert($this);
+        
+        header("Location: /refeicao_alimento");
     }
 }

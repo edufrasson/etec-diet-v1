@@ -41,11 +41,17 @@
                 <br>
                 
                 <label for="horario">Horario:</label>
-                <input class="form-control" id="horario" name="horario" type="number" step="10" />
+                <select id="horario" name="horario">
+                    <option value="Café da Manhã">Café da Manhã</option>
+                    <option value="Almoço">Almoço</option>
+                    <option value="Jantar">Jantar</option>
+                    <option value="Café da Tarde">Café da Tarde</option>
+                </select>
                 <br>
                 
                 <label for="id_dieta">Dieta: </label>
                 <select name="id_dieta" id="id_dieta">
+                   
                     <?php for($i=0; $i < $total_dieta; $i++): ?>
                         <option value="<?=$lista_dieta[$i]->id?>">
                             <?=$lista_dieta[$i]->descricao?>

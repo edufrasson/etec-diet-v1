@@ -49,7 +49,9 @@
                 <br>
                 <label for="id_paciente">Paciente: </label>
                 <select name="id_paciente" id="id_paciente" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    
+                    <option value="null">
+                        Escolha um Paciente
+                    </option>
                     <?php for($i=0; $i<$total_pacientes; $i++):?>
                         <option value="<?= $lista_pacientes[$i]->id?>"><?=$lista_pacientes[$i]->nome?></option>
                     <?php endfor?>

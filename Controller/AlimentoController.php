@@ -6,8 +6,8 @@ class AlimentoController{
     }
 
     public static function save(){
-        include 'Model/AlimentoModel.php';
-
+        include 'Model/AlimentoModel.php';      
+        
         $model = new AlimentoModel();
 
         $model->nome = $_POST['nome'];

@@ -1,3 +1,20 @@
+<?php 
+
+    include 'DAO/RefeicaoDAO.php';
+    include 'DAO/AlimentoDAO.php';
+
+    $refeicao = new RefeicaoDAO();
+
+    $lista_refeicao = $refeicao->getAllRows();
+    $total_refeicao = count($lista_refeicao);
+
+    $alimento = new AlimentoDAO();
+
+    $lista_alimento = $alimento->getAllRows();
+    $total_alimento = count($lista_alimento);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,13 +43,23 @@
         <fieldset >
             <legend>Cadastro Refeição Alimento Assoc</legend>
             <div class="form-group">
-                <label for="id_refeicao">Id da Refeição:</label>
-                <input class="form-control" id="id_refeicao" name="id_refeicao" type="number" min="1" />
-                <br>
-                
-                <label for="id_alimento">Id do Alimento:</label>
-                <input class="form-control" id="id_alimento" name="id_alimento" type="number" min="1" />
-                <br>
+                <label for="id_refeicao">Refeicao:</label>
+                <select name="id_refeicao" id="id_refeicao">                    
+                    <?php for($i=0; $i < $total_refeicao; $i++): ?>
+                        <option value="<?=$lista_refeicao[$i]->id?>">
+                            <?=$lista_refeicao[$i]->descricao?>
+                        </option>
+                    <?php endfor ?>
+                </select>
+                <br>  
+                <label for="id_alimento">Alimento:</label>              
+                <select name="id_alimento" id="id_alimento">                    
+                    <?php for($i=0; $i < $total_alimento; $i++): ?>
+                        <option value="<?=$lista_alimento[$i]->id?>">
+                            <?=$lista_alimento[$i]->nome?>
+                        </option>
+                    <?php endfor ?>
+                </select>
                 
                 <label for="quantidade">Quantidade:</label>
                 <input class="form-control" id="quantidade" name="quantidade" type="number" min="1" />

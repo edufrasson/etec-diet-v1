@@ -50,6 +50,7 @@
                  
                 <label for="id_categoria_alimento">Categoria do alimento: </label>
                 <select name="id_categoria_alimento" id="id_categoria_alimento">
+                    
                     <?php for($i=0; $i < $total_categoria_alimentos; $i++): ?>
                         <option value="<?=$lista_categoria_alimentos[$i]->id?>"><?=$lista_categoria_alimentos[$i]->descricao?></option>
                     <?php endfor ?>

@@ -19,4 +19,14 @@ class RefeicaoDAO{
 
         $stmt->execute();
     }
+    public function getAllRows(){
+        $stmt = $this->conexao->prepare("SELECT * FROM refeicao ORDER BY id desc");
+        $stmt->execute();
+
+        while($r = $stmt->fetchObject())
+            $array_refeicoes[] = $r;
+            
+        return $array_refeicoes;    
+    }
+  
 }

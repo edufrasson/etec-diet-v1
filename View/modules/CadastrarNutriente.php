@@ -61,6 +61,7 @@
 
                 <label for="id_alimento">Alimento: </label>
                 <select name="id_alimento" id="id_alimento">
+                    
                     <?php for($i=0; $i < $total_alimento; $i++): ?>
                         <option value="<?=$lista_alimento[$i]->id?>">
                             <?=$lista_alimento[$i]->nome?>
