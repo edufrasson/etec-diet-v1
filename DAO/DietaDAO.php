@@ -27,7 +27,7 @@ class DietaDAO{
     }
 
     public function getAllRows(){
-        $sql = 'SELECT * FROM dieta';
+        $sql = 'SELECT * FROM dieta ORDER BY id desc';
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

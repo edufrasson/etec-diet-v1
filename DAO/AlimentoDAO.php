@@ -9,14 +9,14 @@ class AlimentoDAO{
     }
 
     public function insert(AlimentoModel $model){
-        $sql = 'INSERT INTO alimento(nome, porcao, id_categoria_alimento, calorias) VALUES (?, ?, ?, ?)';
+        $sql = 'INSERT INTO alimento(nome, porcao, id_categoria_alimento, caloria) VALUES (?, ?, ?, ?)';
 
         $stmt = $this->conexao->prepare($sql);
 
         $stmt->bindValue(1, $model->nome);
         $stmt->bindValue(2, $model->porcao);
         $stmt->bindValue(3, $model->id_categoria_alimento);
-        $stmt->bindValue(4, $model->calorias);
+        $stmt->bindValue(4, $model->caloria);
 
         $stmt->execute();
 
@@ -24,7 +24,7 @@ class AlimentoDAO{
     }
     
     public function getAllRows(){
-        $sql = 'SELECT * FROM alimento';
+        $sql = 'SELECT * FROM alimento ORDER BY id desc';
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

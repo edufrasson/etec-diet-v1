@@ -29,7 +29,7 @@ class PacienteDAO{
     }
 
     public function getAllRows(){
-        $stmt = $this->conexao->prepare("SELECT * FROM paciente");
+        $stmt = $this->conexao->prepare("SELECT * FROM paciente ORDER BY id desc");
         $stmt->execute();
 
         while($p = $stmt->fetchObject())

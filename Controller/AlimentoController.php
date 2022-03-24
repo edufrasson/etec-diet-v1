@@ -12,7 +12,7 @@ class AlimentoController{
 
         $model->nome = $_POST['nome'];
         $model->porcao = $_POST['porcao'];
-        $model->calorias = $_POST['calorias'];
+        $model->caloria = $_POST['caloria'];
         $model->id_categoria_alimento = $_POST['id_categoria_alimento'];
 
         $model->save();
