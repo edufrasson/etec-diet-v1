@@ -1,5 +1,17 @@
 <?php
 
+// CAMADA MODEL // 
+
+// Funções
+
+/**
+ * 1 - Transporte de dados através de uma função 
+ * que acessa a camada DAO
+ * 
+ * 2 - Validação 
+ */
+ 
+
 class AlimentoModel{    
     public $nome, $id_categoria_alimento, $porcao, $caloria;
 
@@ -9,5 +21,5 @@ class AlimentoModel{
         $dao = new AlimentoDAO();
 
         $dao->insert($this);
-    }
+    }    
 }

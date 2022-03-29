@@ -32,36 +32,38 @@
     </header>
     <br>
     <div class="container">
-    <form class="border p-5" action="alimento/save" method="post">
-        <fieldset >
-            <legend>Cadastro Alimentos</legend>
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input class="form-control" id="nome" name="nome" type="text" />
-                <br>
-                
-                <label for="porcao">Porção:</label>
-                <input class="form-control" id="porcao" name="porcao" type="number" step="1" />
-                <br>
-
-                <label for="caloria">Quantidade de caloria:</label>
-                <input class="form-control" id="caloria" name="caloria" type="number" step="1" />
-                <br>
-                 
-                <label for="id_categoria_alimento">Categoria do alimento: </label>
-                <select name="id_categoria_alimento" id="id_categoria_alimento">
+        <form class="border p-5" action="alimento/save" method="post">
+        <!--Action: rota ou arquivo que os dados serão enviados.
+         o método de envio desses dados é definido no method (POST, GET)-->    
+            <fieldset>
+                <legend>Cadastro Alimentos</legend>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input class="form-control" id="nome" name="nome" type="text" />
+                    <br>
                     
-                    <?php for($i=0; $i < $total_categoria_alimentos; $i++): ?>
-                        <option value="<?=$lista_categoria_alimentos[$i]->id?>"><?=$lista_categoria_alimentos[$i]->descricao?></option>
-                    <?php endfor ?>
-                </select>
-                <br><br>
+                    <label for="porcao">Porção:</label>
+                    <input class="form-control" id="porcao" name="porcao" type="number" step="1" />
+                    <br>
 
-                
-                <button type="submit" class="btn btn-primary mb-3">Cadastrar Alimento</button>
-            </div>
-        </fieldset>            
-    </form>
+                    <label for="caloria">Quantidade de caloria:</label>
+                    <input class="form-control" id="caloria" name="caloria" type="number" step="1" />
+                    <br>
+                    
+                    <label for="id_categoria_alimento">Categoria do alimento: </label>
+                    <select name="id_categoria_alimento" id="id_categoria_alimento">
+                        
+                        <?php for($i=0; $i < $total_categoria_alimentos; $i++): ?>
+                            <option value="<?=$lista_categoria_alimentos[$i]->id?>"><?=$lista_categoria_alimentos[$i]->descricao?></option>
+                        <?php endfor ?>
+                    </select>
+                    <br><br>
+
+                    
+                    <button type="submit" class="btn btn-primary mb-3">Cadastrar Alimento</button>
+                </div>
+            </fieldset>            
+        </form>
     </div>
   
     
