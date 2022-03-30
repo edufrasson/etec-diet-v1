@@ -10,4 +10,11 @@ class PacienteModel{
 
         $dao->insert($this);
     }
+
+    public function getAll(){
+        include 'DAO/PacienteDAO.php';
+        $paciente_dao = new PacienteDAO();
+
+        return $paciente_dao->getAllRows();        
+    }
 }

@@ -1,11 +1,11 @@
 <?php 
 
-    include 'DAO/PacienteDAO.php';
+    /*include 'DAO/PacienteDAO.php';
 
     $pacientes = new PacienteDAO();
 
     $lista_pacientes = $pacientes->getAllRows();
-    $total_pacientes = count($lista_pacientes);
+    $total_pacientes = count($lista_pacientes);*/
 
 ?>
 
@@ -52,9 +52,9 @@
                     <option value="null">
                         Escolha um Paciente
                     </option>
-                    <?php for($i=0; $i<$total_pacientes; $i++):?>
-                        <option value="<?= $lista_pacientes[$i]->id?>"><?=$lista_pacientes[$i]->nome?></option>
-                    <?php endfor?>
+                    <?php foreach($model->lista_pacientes as $pacientes):?>
+                        <option value="<?= $pacientes->id?>"><?=$pacientes->nome?></option>
+                    <?php endforeach?>
                     
                 </select>
                 <br>  <br>       

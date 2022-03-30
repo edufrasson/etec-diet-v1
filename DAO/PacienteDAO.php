@@ -30,9 +30,9 @@ class PacienteDAO{
 
     public function getAllRows(){
         $stmt = $this->conexao->prepare("SELECT * FROM paciente ORDER BY id desc");
-        $stmt->execute();
-            
-        return $stmt->fetchAll(PDO::FETCH_CLASS);    
+        $stmt->execute();           
+        
+        return $stmt->fetchAll(\PDO::FETCH_CLASS);    
     }
   
 }

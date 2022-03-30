@@ -1,7 +1,12 @@
 <?php 
 class DietaController{
     public static function form(){
-        include 'View/modules/CadastrarDieta.php';
+        include 'Model/DietaModel.php';
+
+        $model = new DietaModel();
+        $model->lista_pacientes = $model->getAllPacientes();    
+
+        include 'View/modules/CadastrarDieta.php';    
     }
 
     public static function save(){
