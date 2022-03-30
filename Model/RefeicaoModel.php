@@ -1,7 +1,7 @@
 <?php
 
 class RefeicaoModel{
-    public $descricao, $horario, $id_dieta;
+    public $id, $descricao, $horario, $id_dieta;
 
     public function save(){
         include 'DAO/RefeicaoDAO.php';

@@ -1,7 +1,7 @@
 <?php
 
 class CategoriaNutrienteModel{
-    public $descricao;
+    public $id, $descricao;
 
     public function save(){
         include 'DAO/CategoriaNutrienteDAO.php';

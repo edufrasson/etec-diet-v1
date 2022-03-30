@@ -31,11 +31,8 @@ class PacienteDAO{
     public function getAllRows(){
         $stmt = $this->conexao->prepare("SELECT * FROM paciente ORDER BY id desc");
         $stmt->execute();
-
-        while($p = $stmt->fetchObject())
-            $array_pacientes[] = $p;
             
-        return $array_pacientes;    
+        return $stmt->fetchAll(PDO::FETCH_CLASS);    
     }
   
 }

@@ -101,26 +101,7 @@ switch($uri_parse){
         include 'View/cadastros.php';
     break;   
      
-    default:
+    default:        
         include 'View/home.php';
     break;
 }
-
-// --   MVC  --  
-
-// PADRAO DE PROJETO
-
-/**
- * Model
- * View
- * Controller
- */
-
-// Pra que serve? 
-
-/**
- * Separa o projeto em "camadas", de acordo com as funções, cada camada
- * faz uma função diferente;
- * 
- * Manutenção mais fácil, melhor compreensão do código;
- */

@@ -1,7 +1,7 @@
 <?php 
 
 class PacienteModel{
-    public $nome, $peso, $altura, $data_nascimento, $sexo;
+    public $id, $nome, $peso, $altura, $data_nascimento, $sexo;
 
     public function save(){
         include 'DAO/PacienteDAO.php';
