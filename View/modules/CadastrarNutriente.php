@@ -1,18 +1,3 @@
-<?php 
-
-    include 'DAO/CategoriaNutrienteDAO.php';
-    include 'DAO/AlimentoDAO.php';
-
-    $categoria_nutriente = new CategoriaNutrienteDAO();
-
-    $lista_categoria_nutriente = $categoria_nutriente->getAllRows();
-    $total_categoria_nutriente = count($lista_categoria_nutriente);
-
-    $alimento = new AlimentoDAO();
-
-    $lista_alimento = $alimento->getAllRows();
-    $total_alimento = count($lista_alimento);
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,22 +36,22 @@
                 
                 <label for="id_categoria_nutriente">Categoria do Nutriente: </label>
                 <select name="id_categoria_nutriente" id="id_categoria_nutriente">
-                    <?php for($i=0; $i < $total_categoria_nutriente; $i++): ?>
-                        <option value="<?=$lista_categoria_nutriente[$i]->id?>">
-                            <?=$lista_categoria_nutriente[$i]->descricao?>
+                    <?php foreach($model->lista_categoria as $categoria_nutriente): ?>
+                        <option value="<?=$categoria_nutriente->id?>">
+                            <?=$categoria_nutriente->descricao?>
                         </option>
-                    <?php endfor ?>
+                    <?php endforeach ?>
                 </select>
                 <br><br>
 
                 <label for="id_alimento">Alimento: </label>
                 <select name="id_alimento" id="id_alimento">
                     
-                    <?php for($i=0; $i < $total_alimento; $i++): ?>
-                        <option value="<?=$lista_alimento[$i]->id?>">
-                            <?=$lista_alimento[$i]->nome?>
+                    <?php foreach($model->lista_alimentos as $alimento): ?>
+                        <option value="<?=$alimento->id?>">
+                            <?=$alimento->nome?>
                         </option>
-                    <?php endfor ?>
+                    <?php endforeach ?>
                 </select>
                 <br><br>
 

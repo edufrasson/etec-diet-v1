@@ -1,13 +1,3 @@
-<?php 
-
-    include 'DAO/DietaDAO.php';
-
-    $dieta = new DietaDAO();
-
-    $lista_dieta = $dieta->getAllRows();
-    $total_dieta = count($lista_dieta);
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,11 +42,11 @@
                 <label for="id_dieta">Dieta: </label>
                 <select name="id_dieta" id="id_dieta">
                    
-                    <?php for($i=0; $i < $total_dieta; $i++): ?>
-                        <option value="<?=$lista_dieta[$i]->id?>">
-                            <?=$lista_dieta[$i]->descricao?>
+                    <?php foreach($model->lista_dietas as $dietas): ?>
+                        <option value="<?=$dietas->id?>">
+                            <?=$dietas->descricao?>
                         </option>
-                    <?php endfor ?>
+                    <?php endforeach ?>
                 </select>
                 <br><br>            
                 <button type="submit" class="btn btn-primary mb-3">Cadastrar Refeicao</button>

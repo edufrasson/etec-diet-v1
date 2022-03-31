@@ -14,12 +14,20 @@
 
 class AlimentoModel{    
     public $id, $nome, $id_categoria_alimento, $porcao, $caloria;
-
+    public $lista_categorias = array();
+    
     public function save(){
         include 'DAO/AlimentoDAO.php';
 
         $dao = new AlimentoDAO();
 
         $dao->insert($this);
-    }    
+    }
+    
+    public function getAllCategoriaAlimento(){
+        include 'DAO/CategoriaAlimentoDAO.php';
+        $categoria_alimento_dao = new CategoriaAlimentoDAO();
+        
+        return $categoria_alimento_dao->getAllRows();
+    }   
 }

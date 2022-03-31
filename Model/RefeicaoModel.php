@@ -2,6 +2,7 @@
 
 class RefeicaoModel{
     public $id, $descricao, $horario, $id_dieta;
+    public $lista_dietas = array();
 
     public function save(){
         include 'DAO/RefeicaoDAO.php';
@@ -9,5 +10,12 @@ class RefeicaoModel{
         $dao = new RefeicaoDAO();
 
         $dao->insert($this);
+    }
+
+    public function getAllDietas(){
+        include 'DAO/DietaDAO.php';
+        $dieta_dao = new DietaDAO();
+        
+        return $dieta_dao->getAllRows();
     }
 }

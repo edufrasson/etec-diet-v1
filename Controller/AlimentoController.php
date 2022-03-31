@@ -15,6 +15,9 @@ class AlimentoController{
 
     // 1
     public static function form(){
+        include 'Model/AlimentoModel.php';
+        $model = new AlimentoModel();
+        $model->lista_categorias = $model->getAllCategoriaAlimento();
         include 'View/modules/CadastrarAlimento.php';
     }
 

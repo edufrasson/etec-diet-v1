@@ -26,11 +26,8 @@ class CategoriaNutrienteDAO{
         $sql = "SELECT * FROM categoria_nutriente ORDER BY id desc";
 
         $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();      
 
-        $stmt->execute();
-
-        while($categoria_nutriente = $stmt->fetchObject())
-            $array_categoria[] = $categoria_nutriente;
-        return $array_categoria;    
+        return $stmt->fetchAll(PDO::FETCH_CLASS);    
     }
 }

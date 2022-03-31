@@ -2,6 +2,11 @@
 
 class NutrienteController{
     public static function form(){
+        include 'Model/NutrienteModel.php';
+        $model = new NutrienteModel();
+        $model->lista_categoria = $model->getAllCategoriaNutriente();
+        $model->lista_alimentos = $model->getAllAlimentos();
+
         include 'View/modules/CadastrarNutriente.php';
     }
 

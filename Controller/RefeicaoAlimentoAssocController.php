@@ -2,6 +2,11 @@
 
 class RefeicaoAlimentoAssocController{
     public static function form(){
+        include 'Model/RefeicaoAlimentoAssocModel.php';
+        $model = new RefeicaoAlimentoAssocModel();
+        $model->lista_refeicoes = $model->getAllRefeicoes();
+        $model->lista_alimentos = $model->getAllAlimentos();
+
         include 'View/modules/CadastrarRefeicaoAlimentoAssoc.php';
     }
 

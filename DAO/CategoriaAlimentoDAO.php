@@ -26,11 +26,8 @@ class CategoriaAlimentoDAO{
         $sql = "SELECT * FROM categoria_alimento ORDER BY id desc";
 
         $stmt = $this->conexao->prepare($sql);
-        $stmt->execute();
+        $stmt->execute();      
 
-        while($categoria = $stmt->fetchObject())
-            $array_categorias[] = $categoria;
-
-        return $array_categorias;    
+        return $stmt->fetchAll(PDO::FETCH_CLASS);    
     }
 }

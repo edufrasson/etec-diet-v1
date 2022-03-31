@@ -64,9 +64,7 @@ class AlimentoDAO{
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
-
-        while($alimento = $stmt->fetchObject())
-            $array_alimentos[] = $alimento;
-        return $array_alimentos;    
+        
+        return $stmt->fetchAll(PDO::FETCH_CLASS);    
     }
 }

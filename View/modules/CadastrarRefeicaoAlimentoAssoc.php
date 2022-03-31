@@ -1,20 +1,3 @@
-<?php 
-
-    include 'DAO/RefeicaoDAO.php';
-    include 'DAO/AlimentoDAO.php';
-
-    $refeicao = new RefeicaoDAO();
-
-    $lista_refeicao = $refeicao->getAllRows();
-    $total_refeicao = count($lista_refeicao);
-
-    $alimento = new AlimentoDAO();
-
-    $lista_alimento = $alimento->getAllRows();
-    $total_alimento = count($lista_alimento);
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -45,20 +28,20 @@
             <div class="form-group">
                 <label for="id_refeicao">Refeicao:</label>
                 <select name="id_refeicao" id="id_refeicao">                    
-                    <?php for($i=0; $i < $total_refeicao; $i++): ?>
-                        <option value="<?=$lista_refeicao[$i]->id?>">
-                            <?=$lista_refeicao[$i]->descricao?>
+                    <?php foreach($model->lista_refeicoes as $refeicoes): ?>
+                        <option value="<?=$refeicoes->id?>">
+                            <?=$refeicoes->descricao?>
                         </option>
-                    <?php endfor ?>
+                    <?php endforeach ?>
                 </select>
                 <br>  
                 <label for="id_alimento">Alimento:</label>              
                 <select name="id_alimento" id="id_alimento">                    
-                    <?php for($i=0; $i < $total_alimento; $i++): ?>
-                        <option value="<?=$lista_alimento[$i]->id?>">
-                            <?=$lista_alimento[$i]->nome?>
+                    <?php foreach($model->lista_alimentos as $alimento): ?>
+                        <option value="<?=$alimento->id?>">
+                            <?=$alimento->nome?>
                         </option>
-                    <?php endfor ?>
+                    <?php endforeach ?>
                 </select>
                 
                 <label for="quantidade">Quantidade:</label>

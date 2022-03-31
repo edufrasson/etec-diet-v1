@@ -2,6 +2,11 @@
 
 class RefeicaoController{
     public static function form(){
+        include 'Model/RefeicaoModel.php';
+
+        $model = new RefeicaoModel();
+        $model->lista_dietas = $model->getAllDietas();
+
         include 'View/modules/CadastrarRefeicao.php';
     }
 
