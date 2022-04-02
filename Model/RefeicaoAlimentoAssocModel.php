@@ -14,6 +14,13 @@ class RefeicaoAlimentoAssocModel{
         header("Location: /refeicao_alimento");
     }
 
+    public function getAll(){
+        include 'DAO/RefeicaoAlimentoAssocDAO.php';
+        $dao = new RefeicaoAlimentoAssocDAO();
+        
+        return $dao->getAllRows();
+    }
+
     public function getAllRefeicoes(){
         include 'DAO/RefeicaoDAO.php';
         $refeicoes = new RefeicaoDAO();

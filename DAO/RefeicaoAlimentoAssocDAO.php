@@ -21,4 +21,12 @@ class RefeicaoAlimentoAssocDAO{
         $stmt->execute();
 
     }
+
+    public function getAllRows(){
+        $stmt = $this->conexao->prepare("SELECT * FROM refeicao_alimento_assoc ORDER BY id desc");
+        $stmt->execute();           
+        
+        return $stmt->fetchAll(\PDO::FETCH_CLASS);    
+    }
+  
 }

@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <?php include 'Views/includes/cabecalho_cadastro.php'?>
+        <?php include 'View/includes/cabecalho_cadastro.php'?>
     </header>    
     <br>
     <div class="container">

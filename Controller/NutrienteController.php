@@ -7,7 +7,13 @@ class NutrienteController{
         $model->lista_categoria = $model->getAllCategoriaNutriente();
         $model->lista_alimentos = $model->getAllAlimentos();
 
-        include 'View/modules/CadastrarNutriente.php';
+        include 'View/modules/Nutriente/CadastrarNutriente.php';
+    }
+
+    public static function index(){
+        $arr_nutrientes = self::listar();
+
+        include 'View/modules/Nutriente/ListarNutriente.php';
     }
 
     public static function save(){
@@ -23,5 +29,15 @@ class NutrienteController{
         $model->save();
 
         header("Location: /nutriente");
+    }
+
+    public static function listar(){
+        include 'Model/NutrienteModel.php';
+
+        $model = new NutrienteModel();
+
+        $arr_nutrientes = $model->getAll();
+
+        return $arr_nutrientes;
     }
 }

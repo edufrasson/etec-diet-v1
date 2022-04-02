@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a style="color: white;" class="nav-link" href="#">Cadastros</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="/index">Visualizar</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -2,7 +2,13 @@
 
 class CategoriaAlimentoController{
     public static function form(){
-        include 'View/modules/CadastrarCategoriaAlimento.php';
+        include 'View/modules/Categoria_Alimento/CadastrarCategoriaAlimento.php';
+    }
+
+    public static function index(){
+        $arr_categoria_alimentos = self::listar();
+
+        include 'View/modules/Categoria_Alimento/ListarCategoriaAlimento.php';
     }
 
     public static function save(){
@@ -15,5 +21,15 @@ class CategoriaAlimentoController{
         $model->save();
 
         header("Location: /categoria_alimento");
+    }
+
+    public static function listar(){
+        include 'Model/CategoriaAlimentoModel.php';
+
+        $model = new CategoriaAlimentoModel();
+
+        $arr_categoria_alimentos = $model->getAll();
+
+        return $arr_categoria_alimentos;
     }
 }

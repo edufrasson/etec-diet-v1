@@ -13,6 +13,13 @@ class DietaModel{
         $dao->insert($this);
     }
 
+    public function getAll(){
+        include 'DAO/DietaDAO.php';
+        $dao = new DietaDAO();
+        
+        return $dao->getAllRows();
+    }
+
     public function getAllPacientes(){
         include 'DAO/PacienteDAO.php';
         $paciente_dao = new PacienteDAO();

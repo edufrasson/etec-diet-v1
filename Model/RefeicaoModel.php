@@ -12,6 +12,13 @@ class RefeicaoModel{
         $dao->insert($this);
     }
 
+    public function getAll(){
+        include 'DAO/RefeicaoDAO.php';
+        $dao = new RefeicaoDAO();
+        
+        return $dao->getAllRows();
+    }
+
     public function getAllDietas(){
         include 'DAO/DietaDAO.php';
         $dieta_dao = new DietaDAO();

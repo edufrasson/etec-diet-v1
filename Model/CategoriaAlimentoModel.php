@@ -10,4 +10,11 @@ class CategoriaAlimentoModel{
 
         $dao->insert($this);
     }
+
+    public function getAll(){
+        include 'DAO/CategoriaAlimentoDAO.php';
+        $dao = new CategoriaAlimentoDAO();
+        
+        return $dao->getAllRows();
+    }
 }

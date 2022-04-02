@@ -18,7 +18,13 @@ class AlimentoController{
         include 'Model/AlimentoModel.php';
         $model = new AlimentoModel();
         $model->lista_categorias = $model->getAllCategoriaAlimento();
-        include 'View/modules/CadastrarAlimento.php';
+        include 'View/modules/Alimento/CadastrarAlimento.php';
+    }
+
+    public static function index(){
+        $arr_alimentos = self::listar();
+
+        include 'View/modules/Alimento/ListarAlimento.php';
     }
 
     // 2
@@ -38,5 +44,15 @@ class AlimentoController{
         $model->save();
 
         header("Location: /alimento");
+    }
+
+    public static function listar(){
+        include 'Model/AlimentoModel.php';
+
+        $model = new AlimentoModel();
+
+        $arr_alimentos = $model->getAll();
+
+        return $arr_alimentos;
     }
 }

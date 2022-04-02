@@ -1,11 +1,17 @@
 <?php 
 class PacienteController{
     public static function form(){
-        include 'View/modules/CadastrarPaciente.php';
+        include 'View/modules/Paciente/CadastrarPaciente.php';
         
-        $arr_pacientes = self::ver();
+        $arr_pacientes = self::listar();
 
         return $arr_pacientes;
+    }
+
+    public static function index(){
+        $arr_pacientes = self::listar();
+
+        include 'View/modules/Paciente/ListarPaciente.php';
     }
 
     public static function save(){
@@ -24,7 +30,7 @@ class PacienteController{
         header("Location: /paciente");
     }
 
-    public static function ver(){
+    public static function listar(){
         include 'Model/PacienteModel.php';
 
         $model = new PacienteModel();

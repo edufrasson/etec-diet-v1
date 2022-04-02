@@ -7,7 +7,13 @@ class RefeicaoController{
         $model = new RefeicaoModel();
         $model->lista_dietas = $model->getAllDietas();
 
-        include 'View/modules/CadastrarRefeicao.php';
+        include 'View/modules/Refeicao/CadastrarRefeicao.php';
+    }
+
+    public static function index(){
+        $arr_refeicoes = self::listar();
+
+        include 'View/modules/Refeicao/ListarRefeicao.php';
     }
 
     public static function save(){
@@ -22,5 +28,15 @@ class RefeicaoController{
         $model->save();
 
         header("Location: /refeicao");
+    }
+
+    public static function listar(){
+        include 'Model/RefeicaoModel.php';
+
+        $model = new RefeicaoModel();
+
+        $arr_refeicoes = $model->getAll();
+
+        return $arr_refeicoes;
     }
 }

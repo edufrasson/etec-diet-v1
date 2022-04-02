@@ -14,6 +14,13 @@ class NutrienteModel{
         $dao->insert($this);
     }
 
+    public function getAll(){
+        include 'DAO/NutrienteDAO.php';
+        $dao = new NutrienteDAO();
+        
+        return $dao->getAllRows();
+    }
+
     public function getAllCategoriaNutriente(){
         include 'DAO/CategoriaNutrienteDAO.php';
 

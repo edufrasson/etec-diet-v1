@@ -23,6 +23,13 @@ class AlimentoModel{
 
         $dao->insert($this);
     }
+
+    public function getAll(){
+        include 'DAO/AlimentoDAO.php';
+        $dao = new AlimentoDAO();
+        
+        return $dao->getAllRows();
+    }
     
     public function getAllCategoriaAlimento(){
         include 'DAO/CategoriaAlimentoDAO.php';

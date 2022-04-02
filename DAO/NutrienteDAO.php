@@ -20,4 +20,12 @@ class NutrienteDAO{
 
         $stmt->execute();
     }
+
+    public function getAllRows(){
+        $stmt = $this->conexao->prepare("SELECT * FROM nutriente ORDER BY id desc");
+        $stmt->execute();           
+        
+        return $stmt->fetchAll(\PDO::FETCH_CLASS);    
+    }
+  
 }

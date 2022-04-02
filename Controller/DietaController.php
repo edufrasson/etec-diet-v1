@@ -6,7 +6,13 @@ class DietaController{
         $model = new DietaModel();
         $model->lista_pacientes = $model->getAllPacientes();    
 
-        include 'View/modules/CadastrarDieta.php';    
+        include 'View/modules/Dieta/CadastrarDieta.php';    
+    }
+
+    public static function index(){
+        $arr_dietas = self::listar();
+
+        include 'View/modules/Dieta/ListarDieta.php';
     }
 
     public static function save(){
@@ -22,5 +28,15 @@ class DietaController{
         $model->save();
 
         header("Location: /dieta");
+    }
+
+    public static function listar(){
+        include 'Model/DietaModel.php';
+
+        $model = new DietaModel();
+
+        $arr_dieta = $model->getAll();
+
+        return $arr_dieta;
     }
 }
