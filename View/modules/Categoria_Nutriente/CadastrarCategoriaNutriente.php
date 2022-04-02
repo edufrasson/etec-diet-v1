@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Refeições</title>
+    <title>Cadastro de Categoria de Nutrientes</title>
     <link rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
@@ -17,39 +17,19 @@
     
 </head>
 <body>
-    <header>
-        <?php include 'includes/cabecalho_cadastro.php'?>
+    <header>    
+        <?php include 'Views/includes/cabecalho_cadastro.php'?>
     </header>
     <br>
     <div class="container">
-    <form class="border p-5" action="refeicao/save" method="post">
+    <form class="border p-5" action="categoria_nutriente/save" method="post">
         <fieldset >
-            <legend>Cadastro Refeições</legend>
+            <legend>Cadastro de Categoria de Nutrientes</legend>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
                 <input class="form-control" id="descricao" name="descricao" type="text" />
                 <br>
-                
-                <label for="horario">Horario:</label>
-                <select id="horario" name="horario">
-                    <option value="Café da Manhã">Café da Manhã</option>
-                    <option value="Almoço">Almoço</option>
-                    <option value="Jantar">Jantar</option>
-                    <option value="Café da Tarde">Café da Tarde</option>
-                </select>
-                <br>
-                
-                <label for="id_dieta">Dieta: </label>
-                <select name="id_dieta" id="id_dieta">
-                   
-                    <?php foreach($model->lista_dietas as $dietas): ?>
-                        <option value="<?=$dietas->id?>">
-                            <?=$dietas->descricao?>
-                        </option>
-                    <?php endforeach ?>
-                </select>
-                <br><br>            
-                <button type="submit" class="btn btn-primary mb-3">Cadastrar Refeicao</button>
+                <button type="submit" class="btn btn-primary mb-3">Cadastrar Nutriente</button>
             </div>
         </fieldset>            
     </form>

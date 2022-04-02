@@ -18,12 +18,12 @@
 </head>
 <body>
     <header>
-        <?php include 'includes/cabecalho_cadastro.php'?>
+        <?php include 'Views/includes/cabecalho_cadastro.php'?>
     </header>
     <br>
     <div class="container">
     <form class="border p-5" action="refeicao_alimento/save" method="post">
-        <fieldset >
+        <fieldset>
             <legend>Cadastro Refeição Alimento Assoc</legend>
             <div class="form-group">
                 <label for="id_refeicao">Refeicao:</label>
