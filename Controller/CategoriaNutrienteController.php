@@ -6,9 +6,9 @@ class CategoriaNutrienteController{
     }
 
     public static function index(){
-        $arr_alimentos = self::listar();
+        $arr_categoria_nutrientes = self::listar();
 
-        include 'View/modules/Nutriente/ListarNutriente.php';
+        include 'View/modules/Categoria_Nutriente/ListarCategoriaNutriente.php';
     }
 
     public static function save(){

@@ -20,7 +20,15 @@ class RefeicaoDAO{
         $stmt->execute();
     }
     public function getAllRows(){
-        $stmt = $this->conexao->prepare("SELECT * FROM refeicao ORDER BY id desc");
+        $sql = "SELECT r.id as id,
+        r.descricao as descricao,
+        r.horario as horario,
+        d.descricao as nome_dieta
+        FROM refeicao r
+        JOIN dieta d on d.id = r.id_dieta
+     ";
+
+        $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
         
         return $stmt->fetchAll(PDO::FETCH_CLASS);    

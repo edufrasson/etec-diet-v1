@@ -22,7 +22,16 @@ class NutrienteDAO{
     }
 
     public function getAllRows(){
-        $stmt = $this->conexao->prepare("SELECT * FROM nutriente ORDER BY id desc");
+        $sql = "SELECT 
+        n.id as id,
+        a.nome as alimento,        
+        n.quantidade / 1000 as quantidade,
+        n.descricao as descricao    
+        FROM nutriente n
+        JOIN alimento a on a.id = n.id_alimento
+        ";
+
+        $stmt = $this->conexao->prepare($sql);
         $stmt->execute();           
         
         return $stmt->fetchAll(\PDO::FETCH_CLASS);    

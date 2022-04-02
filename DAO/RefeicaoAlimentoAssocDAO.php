@@ -23,7 +23,15 @@ class RefeicaoAlimentoAssocDAO{
     }
 
     public function getAllRows(){
-        $stmt = $this->conexao->prepare("SELECT * FROM refeicao_alimento_assoc ORDER BY id desc");
+        $sql = "SELECT r.descricao as refeicao,
+                    a.nome as alimento,
+                     assoc.quantidade as quantidade
+                FROM etec_diet.refeicao_alimento_assoc assoc
+                JOIN refeicao r on r.id = assoc.id_refeicao
+                JOIN alimento a on a.id = assoc.id_alimento"
+        ;
+
+        $stmt = $this->conexao->prepare($sql);
         $stmt->execute();           
         
         return $stmt->fetchAll(\PDO::FETCH_CLASS);    

@@ -17,7 +17,7 @@
     
 </head>
 <body>
-    <header>
+    <header>        
         <?php include 'View/includes/cabecalho_cadastro.php'?>
     </header>
     <br>

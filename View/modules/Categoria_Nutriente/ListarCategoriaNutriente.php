@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Dietas</title>
+    <title>Lista de Categoria de nutrientes</title>
     <?php include 'View/includes/css_config.php' ?>
     <style>
         main{
@@ -22,20 +22,14 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Data de Inicio</th>
-                        <th scope="col">Data de Fim</th>
-                        <th scope="col">Nome do Paciente</th>
+                        <th scope="col">Descrição</th>                        
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($arr_dietas as $dieta): ?>
+                <?php foreach($arr_categoria_nutrientes as $categoria_nutriente): ?>
                     <tr>
-                        <th scope="row"><?=$dieta->id?></th>
-                        <td><?=$dieta->descricao?></td>
-                        <td><?=$dieta->data_inicio?></td>
-                        <td><?=$dieta->data_fim?></td>
-                        <td><?=$dieta->nome_paciente?></td>
+                        <th scope="row"><?=$categoria_nutriente->id?></th>
+                        <td><?=$categoria_nutriente->descricao?></td>                        
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

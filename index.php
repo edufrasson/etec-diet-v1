@@ -34,6 +34,10 @@ switch($uri_parse){
      */
 
     case '/categoria_alimento':
+        CategoriaAlimentoController::index();
+    break;
+
+    case '/categoria_alimento/form';
         CategoriaAlimentoController::form();
     break;
     
@@ -42,6 +46,10 @@ switch($uri_parse){
     break;
     
     case '/categoria_nutriente':
+        CategoriaNutrienteController::index();
+    break;
+
+    case '/categoria_nutriente/form';
         CategoriaNutrienteController::form();
     break;
     
@@ -50,22 +58,34 @@ switch($uri_parse){
     break;  
     
     case '/paciente':
-        PacienteController::form();
+        PacienteController::index();
     break;
+
+    case '/paciente/form':
+        PacienteController::form();
+    break;    
     
     case '/paciente/save':
         PacienteController::save();
     break;
     
     case '/dieta':
-        DietaController::form();
+        DietaController::index();
     break;
-    
+
+    case '/dieta/form':
+        DietaController::form();
+    break; 
+
     case '/dieta/save':
         DietaController::save();
     break;
     
     case '/alimento':
+        AlimentoController::index();
+    break;
+
+    case '/alimento/form':
         AlimentoController::form();
     break; 
 
@@ -74,6 +94,10 @@ switch($uri_parse){
     break;
     
     case '/nutriente':
+        NutrienteController::index();
+    break;
+
+    case '/nutriente/form':
         NutrienteController::form();
     break; 
 
@@ -82,16 +106,24 @@ switch($uri_parse){
     break;
     
     case '/refeicao':
-        RefeicaoController::form();
+        RefeicaoController::index();
     break; 
+
+    case '/refeicao/form':
+        RefeicaoController::form();
+    break;    
 
     case '/refeicao/save':
         RefeicaoController::save();
     break;
     
     case '/refeicao_alimento':
-        RefeicaoAlimentoAssocController::form();
+        RefeicaoAlimentoAssocController::index();
     break; 
+
+    case '/refeicao_alimento/form':
+        RefeicaoAlimentoAssocController::form();
+    break;    
 
     case '/refeicao_alimento/save':
         RefeicaoAlimentoAssocController::save();
@@ -100,6 +132,10 @@ switch($uri_parse){
     case '/cadastros':
         include 'View/cadastros.php';
     break;   
+
+    case '/index':
+        include 'View/visualizar.php';
+    break;    
      
     default:        
         include 'View/home.php';

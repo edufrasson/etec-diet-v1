@@ -60,7 +60,7 @@ class AlimentoDAO{
     }
     
     public function getAllRows(){
-        $sql = 'SELECT * FROM alimento ORDER BY id desc';
+        $sql = 'SELECT * FROM alimento';
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

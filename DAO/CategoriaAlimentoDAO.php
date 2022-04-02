@@ -23,7 +23,7 @@ class CategoriaAlimentoDAO{
     }
 
     public function getAllRows(){
-        $sql = "SELECT * FROM categoria_alimento ORDER BY id desc";
+        $sql = "SELECT * FROM categoria_alimento";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();      
