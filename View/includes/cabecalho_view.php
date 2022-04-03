@@ -14,7 +14,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" style="color: yellow;" href="/index">Visualizar</a>
+          <a class="nav-link border-bottom border-5" style="color: yellow;" href="/index">Visualizar</a>
         </li>
       </ul>
     </div>

@@ -22,7 +22,7 @@
                 <thead>
                     <tr>                        
                         <th scope="col">Refeicao</th>
-                        <th scope="col">Alimento< /th>
+                        <th scope="col">Alimento </th>
                         <th scope="col">Quantidade (g)</th>                        
                     </tr>
                 </thead>

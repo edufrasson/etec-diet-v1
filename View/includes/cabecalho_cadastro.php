@@ -10,7 +10,7 @@
           <a style="color: white;" class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a style="color: yellow;" class="nav-link" href="#">Cadastros</a>
+          <a style="color: yellow;" class="nav-link border-bottom border-5" href="#">Cadastros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="color: white;" href="/index">Visualizar</a>
