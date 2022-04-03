@@ -10,6 +10,8 @@
         main{
             padding: 5px;
         }
+        .container{background-color: white;}
+        body{background-color: #FFF1BD;}
     </style>
 </head>
 <body>
