@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="View/css/listas.css">
     <title>Lista de Refeições e Alimentos</title>
     <?php include 'View/includes/css_config.php' ?>
-    <style>
-        main{
-            padding: 5px;
-        }
-        .container{background-color: white;}
-        body{background-color: #FFF1BD;}
-    </style>
 </head>
 <body>
     <header>

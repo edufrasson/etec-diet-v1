@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    padding: 5px;
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+    background-repeat: no-repeat;
+}
+body{
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.container{background-color: white;}
