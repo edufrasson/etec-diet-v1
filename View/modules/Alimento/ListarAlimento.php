@@ -22,6 +22,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Porção</th>
                         <th scope="col">Caloria (kcal)</th>
+                        <th scope="col">Ações </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,15 @@
                         <td><?=$alimento->nome?></td>
                         <td><?=$alimento->porcao?></td>
                         <td><?=$alimento->caloria?></td>
+                        <td class="actions">
+                            <a href="/ver?id=<?= $alimento->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $alimento->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

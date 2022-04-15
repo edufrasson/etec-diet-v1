@@ -2,14 +2,17 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+    background-color: #FFF1BD;
+}
+
 main{
-    padding: 5px;
-    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
-    background-repeat: no-repeat;
+    height: 100%;
+    background-color: #FFF1BD;
 }
 body{
-    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-color: #FFF1BD;
+    height: 100%;
 }
 .container{background-color: white;}

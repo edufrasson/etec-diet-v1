@@ -20,7 +20,8 @@
                         <th scope="col">Id</th>
                         <th scope="col">Alimento</th>
                         <th scope="col">Quantidade (g)</th>
-                        <th scope="col">Nutriente</th>                        
+                        <th scope="col">Nutriente</th>
+                        <th scope="col">Ações </th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +31,15 @@
                         <td><?=$nutriente->alimento?></td>                        
                         <td><?=$nutriente->quantidade?></td>
                         <td><?=$nutriente->descricao?></td>
-                                               
+                        <td class="actions">
+                            <a href="/ver?id=<?= $nutriente->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $nutriente->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>                       
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

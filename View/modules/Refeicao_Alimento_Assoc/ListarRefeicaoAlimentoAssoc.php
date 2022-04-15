@@ -19,7 +19,8 @@
                     <tr>                        
                         <th scope="col">Refeicao</th>
                         <th scope="col">Alimento </th>
-                        <th scope="col">Quantidade (g)</th>                        
+                        <th scope="col">Quantidade (g)</th>
+                        <th scope="col">Ações</th>                         
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +28,16 @@
                     <tr>                        
                         <td><?=$assoc->refeicao?></td>                        
                         <td><?=$assoc->alimento?></td>
-                        <td><?=$assoc->quantidade?></td>                                               
+                        <td><?=$assoc->quantidade?></td>
+                        <td class="actions">
+                            <a href="/ver?id=<?= $assoc->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $assoc->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>                                                 
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

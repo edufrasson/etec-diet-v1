@@ -22,6 +22,7 @@
                         <th scope="col">Data de Inicio</th>
                         <th scope="col">Data de Fim</th>
                         <th scope="col">Nome do Paciente</th>
+                        <th scope="col">Ações </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,15 @@
                         <td><?=$dieta->data_inicio?></td>
                         <td><?=$dieta->data_fim?></td>
                         <td><?=$dieta->nome_paciente?></td>
+                        <td class="actions">
+                            <a href="/ver?id=<?= $dieta->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $dieta->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

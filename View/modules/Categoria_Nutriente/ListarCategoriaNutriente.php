@@ -18,14 +18,24 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Descrição</th>                        
+                        <th scope="col">Descrição</th> 
+                        <th scope="col">Ações</th>                       
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($arr_categoria_nutrientes as $categoria_nutriente): ?>
                     <tr>
                         <th scope="row"><?=$categoria_nutriente->id?></th>
-                        <td><?=$categoria_nutriente->descricao?></td>                        
+                        <td><?=$categoria_nutriente->descricao?></td>  
+                        <td class="actions">
+                            <a href="/ver?id=<?= $categoria_nutriente->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $categoria_nutriente->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>                      
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

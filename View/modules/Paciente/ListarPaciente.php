@@ -23,6 +23,7 @@
                         <th scope="col">Peso</th>
                         <th scope="col">Altura</th>
                         <th scope="col">Sexo</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,15 @@
                         <td><?=$paciente->peso?></td>
                         <td><?=$paciente->altura?></td>
                         <td><?=$paciente->sexo?></td>
+                        <td class="actions">
+                            <a href="/ver?id=<?= $paciente->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $paciente->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>

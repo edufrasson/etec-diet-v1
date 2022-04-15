@@ -20,7 +20,8 @@
                         <th scope="col">Id</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Horário</th>
-                        <th scope="col">Nome da Dieta</th>                        
+                        <th scope="col">Nome da Dieta</th>
+                        <th scope="col">Ações</th>                         
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +31,15 @@
                         <td><?=$refeicoes->descricao?></td>                        
                         <td><?=$refeicoes->horario?></td>
                         <td><?=$refeicoes->nome_dieta?></td>
-                                               
+                        <td class="actions">
+                            <a href="/ver?id=<?= $refeicoes->id?>"> 
+                                <i class='bx bx-edit '></i>
+                            </a> 
+
+                            <a href="/deletar?id=<?= $refeicoes->id?>"> 
+                                <i class='bx bx-trash text-danger'></i>
+                            </a> 
+                        </td>                       
                     </tr>  
                 <?php endforeach?>                 
                 </tbody>
