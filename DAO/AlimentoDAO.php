@@ -54,13 +54,40 @@ class AlimentoDAO{
         $stmt->bindValue(4, $model->caloria);
 
         // Executa o código
+        $stmt->execute();        
+    }     
+
+    public function getById($id){
+        $sql = "SELECT * FROM alimento WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        echo '<script>alert("adicionado")</script>';
+        return $stmt->fetchObject();
     }
-    
+
+    public function delete($id){
+        $sql = "DELETE FROM alimento WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
+
+    public function update(AlimentoModel $model){
+        $sql = "UPDATE alimento SET nome = ?, porcao = ?, caloria = ?, id_categoria_alimento = ? WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+
+        $stmt->bindValue(1, $model->nome);
+        $stmt->bindValue(2, $model->porcao);
+        $stmt->bindValue(3, $model->caloria);
+        $stmt->bindValue(4, $model->id_categoria_alimento);
+        $stmt->bindValue(5, $model->id);
+
+        $stmt->execute();
+    }
+
     public function getAllRows(){
-        $sql = 'SELECT * FROM alimento';
+        $sql = 'SELECT * FROM view_alimento';
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

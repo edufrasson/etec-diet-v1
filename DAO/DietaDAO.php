@@ -26,6 +26,33 @@ class DietaDAO{
         $stmt->execute();
     }
 
+    public function getById($id){
+        $sql = "SELECT * FROM dieta WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+
+        return $stmt->fetchObject();
+    }
+
+    public function delete($id){
+        $sql = "DELETE FROM dieta WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
+
+    public function update(DietaModel $model){
+        $sql = "UPDATE dieta SET descricao = ?, data_inicio = ?, data_fim = ?, id_paciente = ? WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $model->descricao);
+        $stmt->bindValue(2, $model->data_inicio);
+        $stmt->bindValue(3, $model->data_fim);
+        $stmt->bindValue(4, $model->id_paciente);
+        $stmt->bindValue(5, $model->id);
+        $stmt->execute();
+    }
+
     public function getAllRows(){
         $sql = 'SELECT d.id,
                        d.descricao,

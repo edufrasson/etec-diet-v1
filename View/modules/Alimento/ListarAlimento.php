@@ -22,6 +22,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Porção</th>
                         <th scope="col">Caloria (kcal)</th>
+                        <th scope="col">Categoria de Alimento</th>
                         <th scope="col">Ações </th>
                     </tr>
                 </thead>
@@ -32,6 +33,7 @@
                         <td><?=$alimento->nome?></td>
                         <td><?=$alimento->porcao?></td>
                         <td><?=$alimento->caloria?></td>
+                        <td><?=$alimento->categoria?></td>
                         <td class="actions">
                             <a href="/ver?id=<?= $alimento->id?>"> 
                                 <i class='bx bx-edit '></i>

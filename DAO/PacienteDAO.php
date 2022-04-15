@@ -28,6 +28,34 @@ class PacienteDAO{
         echo 'Adicionado.';
     }
 
+    public function getById($id){
+        $sql = "SELECT * FROM paciente WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+
+        return $stmt->fetchObject();
+    }
+
+    public function delete($id){
+        $sql = "DELETE FROM paciente WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
+
+    public function update(PacienteModel $model){
+        $sql = "UPDATE paciente SET nome = ?, data_nascimento = ?, peso = ?, altura = ?, sexo = ? WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $model->nome);
+        $stmt->bindValue(2, $model->data_nascimento);
+        $stmt->bindValue(3, $model->peso);
+        $stmt->bindValue(4, $model->altura);
+        $stmt->bindValue(5, $model->sexo);
+        $stmt->bindValue(6, $model->id);
+        $stmt->execute();
+
+    }
+
     public function getAllRows(){
         $sql = "SELECT * FROM select_paciente";
 

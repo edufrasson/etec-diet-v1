@@ -21,6 +21,29 @@ class CategoriaNutrienteDAO{
 
         $stmt->execute();
     }
+    public function getById($id){
+        $sql = "SELECT * FROM categoria_nutriente WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+        
+        return $stmt->fetchObject();
+    }
+
+    public function delete($id){
+        $sql = "DELETE FROM categoria_nutriente WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
+
+    public function update(CategoriaNutrienteModel $model){
+        $sql = "UPDATE categoria_nutriente SET descricao = ? WHERE id = ?";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $model->descricao);
+        $stmt->bindValue(2, $model->id);
+        $stmt->execute();
+    }
 
     public function getAllRows(){
         $sql = "SELECT * FROM categoria_nutriente";
