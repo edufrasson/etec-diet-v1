@@ -1,8 +1,7 @@
 <?php
 
 class NutrienteController{
-    public static function form(){
-        include 'Model/NutrienteModel.php';
+    public static function form(){        
         $model = new NutrienteModel();
         $model->lista_categoria = $model->getAllCategoriaNutriente();
         $model->lista_alimentos = $model->getAllAlimentos();
@@ -17,8 +16,7 @@ class NutrienteController{
     }
 
     public static function save(){
-        include 'Model/NutrienteModel.php';
-
+       
         $model = new NutrienteModel();
 
         $model->descricao = $_POST['descricao'];
@@ -32,8 +30,7 @@ class NutrienteController{
     }
 
     public static function listar(){
-        include 'Model/NutrienteModel.php';
-
+       
         $model = new NutrienteModel();
 
         $arr_nutrientes = $model->getAll();

@@ -11,8 +11,7 @@ class CategoriaNutrienteController{
         include 'View/modules/Categoria_Nutriente/ListarCategoriaNutriente.php';
     }
 
-    public static function save(){
-        include 'Model/CategoriaNutrienteModel.php';
+    public static function save(){        
 
         $model = new CategoriaNutrienteModel;
 
@@ -24,7 +23,7 @@ class CategoriaNutrienteController{
     }
 
     public static function listar(){
-        include 'Model/CategoriaNutrienteModel.php';
+        
 
         $model = new CategoriaNutrienteModel();
 

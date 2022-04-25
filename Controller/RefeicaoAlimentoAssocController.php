@@ -2,8 +2,7 @@
 
 class RefeicaoAlimentoAssocController{
     public static function form(){
-        include 'Model/RefeicaoAlimentoAssocModel.php';
-        $model = new RefeicaoAlimentoAssocModel();
+                $model = new RefeicaoAlimentoAssocModel();
         $model->lista_refeicoes = $model->getAllRefeicoes();
         $model->lista_alimentos = $model->getAllAlimentos();
 
@@ -17,8 +16,7 @@ class RefeicaoAlimentoAssocController{
     }
 
     public static function save(){
-        include 'Model/RefeicaoAlimentoAssocModel.php';
-
+        
         $model = new RefeicaoAlimentoAssocModel();
 
         $model->id_refeicao = $_POST['id_refeicao'];
@@ -29,8 +27,7 @@ class RefeicaoAlimentoAssocController{
     }
 
     public static function listar(){
-        include 'Model/RefeicaoAlimentoAssocModel.php';
-
+        
         $model = new RefeicaoAlimentoAssocModel();
 
         $arr_assoc = $model->getAll();

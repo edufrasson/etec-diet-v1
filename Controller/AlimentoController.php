@@ -15,7 +15,6 @@ class AlimentoController{
 
     // 1
     public static function form(){
-        include 'Model/AlimentoModel.php';
         $model = new AlimentoModel();
         $model->lista_categorias = $model->getAllCategoriaAlimento();
         include 'View/modules/Alimento/CadastrarAlimento.php';
@@ -29,7 +28,7 @@ class AlimentoController{
 
     // 2
     public static function save(){
-        include 'Model/AlimentoModel.php';      
+             
         
         // Criando um objeto model
         $model = new AlimentoModel();
@@ -47,8 +46,7 @@ class AlimentoController{
     }
 
     public static function listar(){
-        include 'Model/AlimentoModel.php';
-
+        
         $model = new AlimentoModel();
 
         $arr_alimentos = $model->getAll();

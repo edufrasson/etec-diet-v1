@@ -15,8 +15,7 @@ class PacienteController{
     }
 
     public static function save(){
-        include 'Model/PacienteModel.php';
-
+        
         $model = new PacienteModel();
 
         $model->nome = $_POST['nome'];
@@ -31,8 +30,7 @@ class PacienteController{
     }
 
     public static function listar(){
-        include 'Model/PacienteModel.php';
-
+        
         $model = new PacienteModel();
 
         $arr_pacientes = $model->getAll();

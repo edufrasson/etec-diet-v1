@@ -6,15 +6,8 @@
  * Serve para transitar entre as camadas, você só conseguirá utilizar
  * um método de uma camada se você inclui-la no seu arquivo
  */
-include 'Controller/AlimentoController.php';
-include 'Controller/CategoriaAlimentoController.php';
-include 'Controller/CategoriaNutrienteController.php';
-include 'Controller/PacienteController.php';
-include 'Controller/DietaController.php';
-include 'Controller/NutrienteController.php';
-include 'Controller/RefeicaoController.php';
-include 'Controller/RefeicaoAlimentoAssocController.php';
 
+include 'Autoload.php';
 
 $uri_parse = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
@@ -33,6 +26,7 @@ switch($uri_parse){
      * Acessa um método de uma classe
      */
 
+    // Rotas para Categoria_Alimento 
     case '/categoria_alimento':
         CategoriaAlimentoController::index();
     break;
@@ -45,6 +39,7 @@ switch($uri_parse){
         CategoriaAlimentoController::save();
     break;
     
+    // Rotas para Categoria_Nutriente
     case '/categoria_nutriente':
         CategoriaNutrienteController::index();
     break;
@@ -57,6 +52,7 @@ switch($uri_parse){
         CategoriaNutrienteController::save();
     break;  
     
+    // Rotas para Paciente
     case '/paciente':
         PacienteController::index();
     break;
@@ -67,8 +63,9 @@ switch($uri_parse){
     
     case '/paciente/save':
         PacienteController::save();
-    break;
-    
+    break;    
+
+    // Rotas para Dieta
     case '/dieta':
         DietaController::index();
     break;
@@ -79,8 +76,9 @@ switch($uri_parse){
 
     case '/dieta/save':
         DietaController::save();
-    break;
-    
+    break;    
+
+    // Rotas para Alimento 
     case '/alimento':
         AlimentoController::index();
     break;
@@ -92,7 +90,7 @@ switch($uri_parse){
     case '/alimento/save':
         AlimentoController::save();
     break;
-    
+    // Rotas para Nutriente
     case '/nutriente':
         NutrienteController::index();
     break;
@@ -105,6 +103,7 @@ switch($uri_parse){
         NutrienteController::save();
     break;
     
+    // Rotas para Refeicao
     case '/refeicao':
         RefeicaoController::index();
     break; 
@@ -117,6 +116,7 @@ switch($uri_parse){
         RefeicaoController::save();
     break;
     
+    // Rotas para Refeicao_Alimento_Assoc 
     case '/refeicao_alimento':
         RefeicaoAlimentoAssocController::index();
     break; 

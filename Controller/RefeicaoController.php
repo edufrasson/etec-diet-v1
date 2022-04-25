@@ -2,8 +2,7 @@
 
 class RefeicaoController{
     public static function form(){
-        include 'Model/RefeicaoModel.php';
-
+        
         $model = new RefeicaoModel();
         $model->lista_dietas = $model->getAllDietas();
 
@@ -17,8 +16,7 @@ class RefeicaoController{
     }
 
     public static function save(){
-        include 'Model/RefeicaoModel.php';
-
+        
         $model = new RefeicaoModel();
 
         $model->descricao = $_POST['descricao'];
@@ -31,8 +29,7 @@ class RefeicaoController{
     }
 
     public static function listar(){
-        include 'Model/RefeicaoModel.php';
-
+        
         $model = new RefeicaoModel();
 
         $arr_refeicoes = $model->getAll();

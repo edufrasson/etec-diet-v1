@@ -1,8 +1,7 @@
 <?php 
 class DietaController{
     public static function form(){
-        include 'Model/DietaModel.php';
-
+        
         $model = new DietaModel();
         $model->lista_pacientes = $model->getAllPacientes();    
 
@@ -16,8 +15,7 @@ class DietaController{
     }
 
     public static function save(){
-        include 'Model/DietaModel.php';
-
+        
         $model = new DietaModel();
 
         $model->descricao = $_POST['descricao'];
@@ -31,8 +29,7 @@ class DietaController{
     }
 
     public static function listar(){
-        include 'Model/DietaModel.php';
-
+        
         $model = new DietaModel();
 
         $arr_dieta = $model->getAll();
